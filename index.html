@@ -31,9 +31,10 @@
         .logo { 
             font-size: 1.2rem; 
             font-weight: 700; 
-            color: #00f5c4;
             letter-spacing: 2px;
         }
+        .logo .jk { color: #00f5c4; }
+        .logo .name { color: #666; font-weight: 400; }
         nav ul { list-style: none; display: flex; gap: 40px; }
         nav ul a { 
             color: #e0e0e0; 
@@ -188,6 +189,7 @@
             text-transform: uppercase;
             border-bottom: 1px solid #00f5c4;
             padding-bottom: 2px;
+            margin-right: 20px;
         }
 
         /* SKILLS */
@@ -235,13 +237,48 @@
             font-size: 0.8rem;
             letter-spacing: 2px;
         }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 16px 20px;
+            }
+            .logo .name {
+                display: none;
+            }
+            .logo .jk {
+                color: #00f5c4;
+            }
+            nav ul {
+                gap: 16px;
+            }
+            nav ul a {
+                font-size: 0.8rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero-tag {
+                font-size: 0.7rem;
+                letter-spacing: 2px;
+            }
+            .hero-subtitle {
+                font-size: 0.85rem;
+                letter-spacing: 1px;
+            }
+            section {
+                padding: 80px 24px;
+            }
+            .contact-links {
+                gap: 24px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <!-- NAV -->
     <nav>
-        <div class="logo">KAMUGISHA_JOSEPH</div>
+        <div class="logo"><span class="jk">JK</span><span class="name"> | Kamugisha Joseph</span></div>
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -257,7 +294,7 @@
         <h1>Engineering the future,<br>one intelligent system at a time</h1>
         <p class="hero-subtitle">Computer Engineering Student &nbsp;|&nbsp; Aspiring Edge AI Engineer &nbsp;|&nbsp; ISBAT University</p>
         <a href="#projects" class="hero-btn">View My Work</a>
-        <image src="profile.jpeg" alt="Joseph Kamugisha" class="hero-img">
+        <img src="profile.jpeg" alt="Joseph Kamugisha" class="hero-img">
     </div>
 
     <!-- ABOUT -->
@@ -275,7 +312,7 @@
         <h2 class="section-title">Projects</h2>
 
         <div class="project-card">
-            <p class="project-tag">Flagship Project · April,2026–Present</p>
+            <p class="project-tag">Flagship Project · April 2026 – Present</p>
             <h3>KATEYUNGA</h3>
             <p>A fully offline AI assistant built for environments with no internet access. KATEYUNGA runs a local large language model via Ollama, reads and cites PDF documents using a custom RAG pipeline, and maintains conversation memory across sessions — all without sending a single byte to the cloud.</p>
             <div class="project-stack">
@@ -287,7 +324,7 @@
                 <span class="stack-item">Llama 3.2</span>
             </div>
             <a href="https://github.com/Kamugisha-Joseph/KATEYUNGA" class="project-link">View on GitHub →</a>
-            <a href="https://youtu.be/CjAlGFBvsPO" class="project-link" target="_blank">Watch Demo →</a>
+            <a href="https://youtu.be/CjAlGFBvsP0" class="project-link" target="_blank">Watch Demo →</a>
         </div>
     </section>
 
@@ -301,8 +338,8 @@
                 <ul>
                     <li>Python</li>
                     <li>C</li>
-                    <li>java</li>
-                    <li>HTML & CSS (learning)</li>                    
+                    <li>Java</li>
+                    <li>HTML & CSS (learning)</li>
                 </ul>
             </div>
             <div class="skill-group">
@@ -320,11 +357,7 @@
                 <ul>
                     <li>Git & GitHub</li>
                     <li>Streamlit</li>
-                  
                     <li>VS Code</li>
-                </ul>
-            </div>
-            
                 </ul>
             </div>
         </div>
